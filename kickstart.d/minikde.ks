@@ -8,7 +8,7 @@
 # KP:DESCRIPTION:END
 #
 
-%include %%KP_KICKSTART_DIR%%/base.ks
+%include %%KP_KICKSTART_DIR%%/minibase.ks
 
 #
 # PACKAGES
