@@ -60,12 +60,12 @@ repo --name="RPMFusion Non-Free - Updates" --baseurl=http://download1.rpmfusion.
 #Dont install who admin-tools group only what we need
 #@admin-tools
 setroubleshoot
-system-config-boot
 system-config-date
 system-config-firewall
 system-config-keyboard
 system-config-language
 system-config-users
+systemd-ui
 
 #Dont install who critical-path-base group only what we need
 #@critical-path-base

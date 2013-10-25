@@ -16,6 +16,10 @@
 
 %packages
 
+#test Firefox install
+
+firefox
+
 # make sure mariadb lands instead of MySQL (hopefully a temporary hack)
 #mariadb-embedded
 #mariadb-libs
@@ -26,6 +30,8 @@ nss-mdns
 
 # (RE)BRANDING
 korora-backgrounds-kde
+kcm-gtk
+oxygen-gtk
 
 #
 # EXTRA PACKAGES
@@ -45,13 +51,11 @@ font-manager
 fprintd-pam
 frei0r-plugins
 fuse
-#git
 gparted
 htop
 jack-audio-connection-kit
 java-1.7.0-openjdk
 kdeartwork
-kdm
 kde-plasma-daisy
 kde-plasma-yawp
 kde-settings
@@ -65,9 +69,10 @@ kde-plasma-networkmanagement-openconnect
 kde-plasma-networkmanagement-openvpn
 kde-plasma-networkmanagement-pptp
 kde-plasma-networkmanagement-vpnc
-kdiff3
+kdm
 konversation
 korora-settings-kde
+kmix
 libdvdcss
 libdvdnav
 libdvdread
@@ -78,18 +83,17 @@ p7zip
 p7zip-plugins
 PackageKit-browser-plugin
 PackageKit-command-not-found
+plasma-applet-showdesktop
 policycoreutils-gui
 polkit-desktop-policy
 prelink
 pybluez
 rawtherapee
-samba
-samba-winbind
-sane-backends
 screen
 vim
 xorg-x11-apps
 xorg-x11-resutils
+xsettings-kde
 yumex
 yum-plugin-priorities
 yum-plugin-refresh-updatesd
@@ -115,15 +119,21 @@ lame
 libmpg123
 PackageKit-gstreamer-plugin
 pavucontrol
-phonon-backend-vlc
-vlc
-vlc-extras
+
+
+# VLC  Maybe some day
+#phonon-backend-vlc
+#vlc
+#vlc-extras
+
 vorbis-tools
-xine-lib-extras
-xine-lib-extras-freeworld
-xine-plugin
-xine-lib-extras
-xine-lib-extras-freeworld
+
+# No Xine for now
+#xine-lib-extras
+#xine-lib-extras-freeworld
+#xine-plugin
+#xine-lib-extras
+#xine-lib-extras-freeworld
 
 
 #
@@ -132,9 +142,6 @@ xine-lib-extras-freeworld
 #kernel-devel
 #dkms
 time
-
-# Browser
-rekonq
 
 # Packages to be Removed
 -gcc*
@@ -264,7 +271,7 @@ sed -i 's/#DefaultUser=johndoe/DefaultUser=liveuser/' /etc/kde/kdm/kdmrc
 mkdir -p /home/liveuser/.kde/share/config/
 cat > /home/liveuser/.kde/share/config/kickoffrc << MENU_EOF
 [Favorites]
-FavoriteURLs=/usr/share/applications/kde4/apper.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/kde4/rekonq.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/kde4/konsole.desktop,/usr/share/applications/liveinst.desktop
+FavoriteURLs=/usr/share/applications/kde4/apper.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/firefox.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/kde4/konsole.desktop,/usr/share/applications/liveinst.desktop
 MENU_EOF
 
 # show liveinst.desktop on desktop and in menu
